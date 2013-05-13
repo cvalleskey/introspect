@@ -1,0 +1,44 @@
+/* ===== IE Stylesheet ===================================================== */
+
+$border-lighter:	#EEE;
+$border-light:		#DDD;
+$border-medium:		#999;
+
+.lt-ie10 {}
+
+// IE <= 8
+
+.lt-ie9 {
+	abbr,
+	blockquote,
+	footer[role="contentinfo"],
+	header[role="banner"],
+	li.dropdown ul,
+	pre,
+	.search-box,
+	.post .author,
+	.post-nav,
+	.comments,
+	.comment-list
+	{
+		border-color: $border-light;
+	}
+	table, td, th
+	{
+		border-color: $border-lighter;
+	}
+	th {
+		background-color: $border-lighter;
+	}
+	input[type="text"], input[type="password"], textarea, .input {
+		border-color: $border-medium;
+	}
+}
+
+// IE <= 7
+
+.lt-ie8 {}
+
+// IE <= 6
+
+.lt-ie7 {}
