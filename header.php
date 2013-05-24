@@ -39,7 +39,7 @@
 	wp_head();
 ?>
 </head>
-<body <?php body_class(); ?><?php echo isset($post)? (' id="' . $post->post_name) : ''; ?>">
+<body <?php body_class(); ?><?php echo isset($post)? (' id="' . $post->post_name . '"') : ''; ?>>
 	<header role="banner">
 	<div class="container">
 		<nav role="navigation">

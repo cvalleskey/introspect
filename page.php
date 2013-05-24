@@ -4,9 +4,7 @@ $container = get_post_custom_values('container');
 $class = isset($container[0])? $container[0] : false;
 
 ?>
-
 <?php get_header(); ?>
-
 <article role="main" <?php post_class(); ?>>
 	<section class="post">
 		<?php the_post(); ?>

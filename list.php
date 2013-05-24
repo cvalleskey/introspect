@@ -3,14 +3,6 @@
 Template Name: Post List
 */
 
-// Which page of the blog are we on?
-$paged = get_query_var('paged');
-query_posts(array(
-	'cat' => -0,
-	'paged' => $paged,
-	'posts_per_page' => -1
-	));
-
 // make posts print only the first part with a link to rest of the post.
 //global $more;
 //$more = 0;
@@ -30,7 +22,6 @@ $class = isset($container[0])? $container[0] : false;
 $last = 0;
 
 ?>
-
 <?php get_header(); ?>
 <article role="main">
 	<div class="container <?php if($class) { echo $class; }?>">
@@ -40,6 +31,19 @@ $last = 0;
 		<section class="content">
 
 		<?php the_content(); ?>
+
+		<?php
+
+		// The LOOP yall
+		$paged = get_query_var('paged');
+		query_posts(array(
+			'cat' => -0,
+			'paged' => $paged,
+			'posts_per_page' => -1
+			));
+		$last = 0;
+
+		?>
 
 		<?php if($listtype == "list") { ?>
 

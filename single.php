@@ -7,7 +7,6 @@ $poststyle = get_post_custom_values('post-style');
 $poststyle_class = isset($poststyle[0])? " " . $poststyle[0] : "";
 
 ?>
-
 <?php get_header(); ?>
 <article role="main" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<section class="post">
